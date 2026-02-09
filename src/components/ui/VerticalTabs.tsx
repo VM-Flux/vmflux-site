@@ -207,7 +207,7 @@ export function VerticalTabs({
       id: `vtab-panel-${generatedId}-${tabContentId}`,
       'aria-labelledby': `vtab-${generatedId}-${tabContentId}`,
       tabIndex: 0,
-      style: { display: isActive ? undefined : 'none' },
+      hidden: isActive ? undefined : true,
       className: cn(
         (child.props as Record<string, string | undefined>)?.className,
         'outline-none rounded-md',
