@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0-beta",
+  "version": "0.2.1-beta",
   "minCliVersion": "1.6.0",
   "files": {
     "safe": [
@@ -9,6 +9,7 @@
       "src/layouts/",
       "src/lib/",
       "src/styles/tokens/",
+      "src/styles/themes/",
       "src/styles/global.css",
       "src/content.config.ts",
       "tsconfig.json",
@@ -39,7 +40,9 @@
       "@astrojs/react": "5.0.0-beta.1"
     },
     "remove": ["zod", "astro-seo"],
-    "add": {}
+    "add": {
+      "class-variance-authority": "^0.7.1"
+    }
   },
   "migrations": [
     {
@@ -64,6 +67,26 @@
     {
       "title": "Enable CSP",
       "description": "Add `security: { csp: true }` to astro.config.mjs with external resource allowlists"
+    },
+    {
+      "title": "Remove colorScheme prop from Button",
+      "description": "The `colorScheme` prop has been removed from Button. To achieve the invert effect, wrap the Button in a `<div class=\"invert-section\">` instead.",
+      "pattern": "colorScheme\\s*[=:]"
+    },
+    {
+      "title": "Remove variant=\"invert\" from Input",
+      "description": "The `variant=\"invert\"` prop has been removed from Input. To achieve the invert effect, wrap the Input in a `<div class=\"invert-section\">` instead.",
+      "pattern": "variant\\s*=\\s*['\"]invert['\"]"
+    },
+    {
+      "title": "Rename selectSize to size on Select",
+      "description": "The `selectSize` prop on Select has been renamed to `size`. Update all usages: `selectSize=\"sm\"` → `size=\"sm\"`.",
+      "pattern": "selectSize\\s*[=:]"
+    },
+    {
+      "title": "Rename textareaSize to size on Textarea",
+      "description": "The `textareaSize` prop on Textarea has been renamed to `size`. Update all usages: `textareaSize=\"sm\"` → `size=\"sm\"`.",
+      "pattern": "textareaSize\\s*[=:]"
     }
   ]
 }

@@ -5,11 +5,10 @@
  * React components are needed for interactive client-side functionality.
  *
  * Astro components (*.astro) are imported directly from their files:
- * - Badge.astro, Alert.astro, Tabs.astro, Dropdown.astro, Dialog.astro
- * - Tooltip.astro, Avatar.astro, AvatarGroup.astro, Skeleton.astro, Icon.astro
- * - Button.astro (server-side), CTA.astro, NpmCopyButton.astro, Logo.astro
- * - Separator.astro, Switch.astro, Accordion.astro, Progress.astro
- * - Table.astro, Pagination.astro
+ * - Badge, Alert, Avatar, AvatarGroup, Skeleton, Icon, Logo, CTA, NpmCopyButton
+ * - Separator, Accordion, Progress, Table, Pagination, SocialProof
+ * - Tabs, Dropdown, Dialog, Tooltip, CodeBlock
+ * - Button.astro (server-side), VerticalTabs.astro (server-side)
  */
 
 // React components for client-side interactivity
@@ -38,7 +37,7 @@ export { skeletonVariants, type SkeletonVariants } from './skeleton.variants';
 export { avatarVariants, type AvatarVariants } from './avatar.variants';
 export { separatorVariants, type SeparatorVariants } from './separator.variants';
 export { switchTrackVariants, switchThumbVariants, type SwitchVariants } from './switch.variants';
-export { accordionItemVariants, accordionTriggerVariants, type AccordionVariants } from './accordion.variants';
+export { accordionItemVariants, accordionTriggerVariants, type AccordionVariants, type AccordionTriggerVariants } from './accordion.variants';
 export { toastVariants, toastIconColors, type ToastVariants } from './toast.variants';
 export { progressTrackVariants, progressBarVariants, type ProgressVariants } from './progress.variants';
 export { paginationItemVariants, type PaginationVariants } from './pagination.variants';

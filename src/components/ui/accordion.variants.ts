@@ -38,3 +38,4 @@ export const accordionTriggerVariants = cva(
 );
 
 export type AccordionVariants = VariantProps<typeof accordionItemVariants>;
+export type AccordionTriggerVariants = VariantProps<typeof accordionTriggerVariants>;
