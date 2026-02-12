@@ -27,13 +27,6 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
-    // Mark native modules as external for OG image generation
-    ssr: {
-      external: ['@resvg/resvg-js'],
-    },
-    optimizeDeps: {
-      exclude: ['@resvg/resvg-js'],
-    },
   },
 
   security: {
