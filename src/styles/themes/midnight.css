@@ -1,130 +1,199 @@
 /* =============================================================================
    Velocity Theme - Midnight
    =============================================================================
-   A blue-tinted dark theme with cool undertones. Great for developer tools,
-   dashboards, and applications that want a modern, atmospheric feel.
+   Deep purple atmosphere with electric violet accents. DM Sans for body,
+   Sora for display — geometric, modern, nocturnal.
 
-   To use: swap the theme import in global.css:
-     @import './themes/midnight.css';
+   Dark mode is the hero. Light mode carries the purple tint gracefully.
+
+   To use: swap the theme import in tokens/colors.css:
+     @import '../themes/midnight.css';
    ============================================================================= */
 
 :root {
   /* -------------------------------------------------------------------------
-     Semantic Tokens - Light Mode (blue-tinted grays)
+     Brand Scale Override — Violet (hue 295)
+     Replaces the default International Orange with electric violet.
+     Any component using brand-* classes picks this up automatically.
      ------------------------------------------------------------------------- */
-  --background: oklch(99% 0.005 250);
-  --background-secondary: oklch(97% 0.008 250);
-  --background-tertiary: oklch(95% 0.01 250);
-  --background-elevated: oklch(99% 0.005 250);
+  --brand-50: oklch(97% 0.015 295);
+  --brand-100: oklch(94% 0.035 295);
+  --brand-200: oklch(87% 0.07 295);
+  --brand-300: oklch(77% 0.13 295);
+  --brand-400: oklch(68% 0.2 295);
+  --brand-500: oklch(58% 0.25 295);
+  --brand-600: oklch(50% 0.22 295);
+  --brand-700: oklch(42% 0.18 295);
+  --brand-800: oklch(34% 0.14 295);
+  --brand-900: oklch(24% 0.1 295);
 
-  --foreground: oklch(18% 0.02 250);
-  --foreground-secondary: oklch(35% 0.02 250);
-  --foreground-muted: oklch(45% 0.015 250);
-  --foreground-subtle: oklch(55% 0.01 250);
+  /* -------------------------------------------------------------------------
+     Semantic Tokens - Light Mode (lavender-tinted)
+     ------------------------------------------------------------------------- */
+  --background: oklch(99% 0.006 285);
+  --background-secondary: oklch(97% 0.01 285);
+  --background-tertiary: oklch(94.5% 0.015 285);
+  --background-elevated: oklch(99.5% 0.004 285);
 
-  --border: oklch(90% 0.015 250);
-  --border-strong: oklch(82% 0.02 250);
-  --border-subtle: oklch(95% 0.008 250);
+  --foreground: oklch(16% 0.03 285);
+  --foreground-secondary: oklch(30% 0.025 285);
+  --foreground-muted: oklch(42% 0.02 285);
+  --foreground-subtle: oklch(52% 0.015 285);
 
-  --primary: oklch(18% 0.02 250);
-  --primary-hover: oklch(25% 0.02 250);
-  --primary-foreground: oklch(99% 0.005 250);
+  --border: oklch(90% 0.018 285);
+  --border-strong: oklch(82% 0.025 285);
+  --border-subtle: oklch(95% 0.01 285);
 
-  --secondary: oklch(95% 0.01 250);
-  --secondary-hover: oklch(90% 0.015 250);
-  --secondary-foreground: oklch(18% 0.02 250);
+  --primary: oklch(16% 0.03 285);
+  --primary-hover: oklch(22% 0.03 285);
+  --primary-foreground: oklch(99% 0.006 285);
+
+  --secondary: oklch(94.5% 0.015 285);
+  --secondary-hover: oklch(90% 0.018 285);
+  --secondary-foreground: oklch(16% 0.03 285);
 
   --accent: var(--brand-500);
   --accent-hover: var(--brand-600);
-  --accent-light: oklch(94% 0.03 45);
+  --accent-light: var(--brand-100);
 
-  --muted: oklch(95% 0.01 250);
-  --muted-foreground: oklch(55% 0.01 250);
+  --muted: oklch(94.5% 0.015 285);
+  --muted-foreground: oklch(52% 0.015 285);
 
-  --card: oklch(99% 0.005 250);
-  --card-border: oklch(90% 0.015 250);
+  --card: oklch(99% 0.006 285);
+  --card-border: oklch(90% 0.018 285);
 
-  --input-bg: oklch(99% 0.005 250);
-  --input-border: oklch(82% 0.02 250);
-  --input-focus: oklch(18% 0.02 250);
+  --input-bg: oklch(99.5% 0.004 285);
+  --input-border: oklch(82% 0.025 285);
+  --input-focus: var(--brand-500);
 
-  --ring: oklch(45% 0.15 250);
+  --ring: var(--brand-500);
 
   /* Destructive */
   --destructive: var(--error);
   --destructive-foreground: oklch(99% 0 0);
 
   /* Gradient colors */
-  --gradient-start: oklch(97% 0.008 250);
-  --gradient-end: oklch(99% 0.005 250);
+  --gradient-start: oklch(96% 0.012 285);
+  --gradient-end: oklch(99% 0.006 285);
 
   /* -------------------------------------------------------------------------
      Inverted/Contrast Section
      ------------------------------------------------------------------------- */
-  --surface-invert: oklch(15% 0.03 250);
-  --surface-invert-secondary: oklch(20% 0.025 250);
-  --surface-invert-tertiary: oklch(25% 0.02 250);
-  --on-invert: oklch(95% 0.008 250);
-  --on-invert-secondary: oklch(80% 0.015 250);
-  --on-invert-muted: oklch(65% 0.01 250);
-  --border-invert: oklch(25% 0.02 250);
-  --border-invert-strong: oklch(35% 0.02 250);
+  --surface-invert: oklch(14% 0.04 285);
+  --surface-invert-secondary: oklch(18% 0.035 285);
+  --surface-invert-tertiary: oklch(24% 0.03 285);
+  --on-invert: oklch(95% 0.01 285);
+  --on-invert-secondary: oklch(80% 0.02 285);
+  --on-invert-muted: oklch(65% 0.015 285);
+  --border-invert: oklch(24% 0.03 285);
+  --border-invert-strong: oklch(32% 0.025 285);
+
+  /* -------------------------------------------------------------------------
+     Typography — DM Sans (body) + Sora (display)
+     ------------------------------------------------------------------------- */
+  --theme-font-sans: 'Manrope Variable', 'Manrope', ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --theme-font-display: 'Outfit Variable', 'Outfit', var(--theme-font-sans);
+  --theme-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace,
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --theme-heading-weight: 600;
+  --theme-heading-tracking: -0.03em;
+  --theme-body-leading: 1.65;
+
+  /* -------------------------------------------------------------------------
+     Shadows — purple-tinted, atmospheric
+     ------------------------------------------------------------------------- */
+  --theme-shadow-sm: 0 1px 3px oklch(20% 0.04 285 / 0.08);
+  --theme-shadow-md: 0 4px 12px oklch(20% 0.04 285 / 0.1),
+    0 0 1px oklch(20% 0.04 285 / 0.06);
+  --theme-shadow-lg: 0 8px 24px oklch(20% 0.04 285 / 0.12),
+    0 0 1px oklch(20% 0.04 285 / 0.06);
+  --theme-shadow-xl: 0 24px 48px oklch(20% 0.04 285 / 0.16),
+    0 0 1px oklch(20% 0.04 285 / 0.06);
+
+  /* -------------------------------------------------------------------------
+     Border Radii — softer, more rounded
+     ------------------------------------------------------------------------- */
+  --theme-radius-sm: 0.375rem;   /* 6px  */
+  --theme-radius-md: 0.5rem;     /* 8px  */
+  --theme-radius-lg: 0.75rem;    /* 12px */
+  --theme-radius-xl: 1rem;       /* 16px */
+  --theme-radius-full: 9999px;
 }
 
 /* -------------------------------------------------------------------------
-   Dark Mode - Deep midnight blue
+   Dark Mode — deep purple-black atmosphere
    ------------------------------------------------------------------------- */
 .dark {
-  --background: oklch(12% 0.03 250);
-  --background-secondary: oklch(16% 0.025 250);
-  --background-tertiary: oklch(20% 0.02 250);
-  --background-elevated: oklch(16% 0.025 250);
+  --background: oklch(10% 0.04 285);
+  --background-secondary: oklch(14% 0.035 285);
+  --background-tertiary: oklch(18% 0.03 285);
+  --background-elevated: oklch(14% 0.035 285);
 
-  --foreground: oklch(95% 0.008 250);
-  --foreground-secondary: oklch(75% 0.015 250);
-  --foreground-muted: oklch(55% 0.015 250);
-  --foreground-subtle: oklch(45% 0.01 250);
+  --foreground: oklch(94% 0.012 285);
+  --foreground-secondary: oklch(75% 0.02 285);
+  --foreground-muted: oklch(55% 0.018 285);
+  --foreground-subtle: oklch(45% 0.015 285);
 
-  --border: oklch(22% 0.025 250);
-  --border-strong: oklch(30% 0.02 250);
-  --border-subtle: oklch(16% 0.025 250);
+  --border: oklch(20% 0.035 285);
+  --border-strong: oklch(28% 0.03 285);
+  --border-subtle: oklch(14% 0.035 285);
 
-  --primary: oklch(95% 0.008 250);
-  --primary-hover: oklch(85% 0.015 250);
-  --primary-foreground: oklch(12% 0.03 250);
+  --primary: oklch(94% 0.012 285);
+  --primary-hover: oklch(85% 0.018 285);
+  --primary-foreground: oklch(10% 0.04 285);
 
-  --secondary: oklch(20% 0.02 250);
-  --secondary-hover: oklch(25% 0.02 250);
-  --secondary-foreground: oklch(90% 0.01 250);
+  --secondary: oklch(18% 0.03 285);
+  --secondary-hover: oklch(24% 0.028 285);
+  --secondary-foreground: oklch(90% 0.015 285);
 
-  --muted: oklch(20% 0.02 250);
-  --muted-foreground: oklch(55% 0.015 250);
+  --accent: var(--brand-400);
+  --accent-hover: var(--brand-500);
+  --accent-light: oklch(18% 0.06 295);
 
-  --card: oklch(16% 0.025 250);
-  --card-border: oklch(22% 0.025 250);
+  --muted: oklch(18% 0.03 285);
+  --muted-foreground: oklch(55% 0.018 285);
 
-  --input-bg: oklch(16% 0.025 250);
-  --input-border: oklch(30% 0.02 250);
-  --input-focus: oklch(95% 0.008 250);
+  --card: oklch(14% 0.035 285);
+  --card-border: oklch(20% 0.035 285);
 
-  --ring: oklch(60% 0.15 250);
+  --input-bg: oklch(14% 0.035 285);
+  --input-border: oklch(28% 0.03 285);
+  --input-focus: var(--brand-400);
+
+  --ring: var(--brand-400);
+
+  --destructive: oklch(65% 0.22 25);
+  --destructive-foreground: oklch(99% 0 0);
 
   /* Gradient colors */
-  --gradient-start: oklch(12% 0.03 250);
-  --gradient-end: oklch(16% 0.025 250);
+  --gradient-start: oklch(10% 0.04 285);
+  --gradient-end: oklch(14% 0.035 285);
 
-  /* Status colors - adjusted for dark blue bg */
-  --success-light: oklch(20% 0.04 145);
-  --warning-light: oklch(20% 0.04 85);
-  --error-light: oklch(20% 0.04 25);
+  /* Status colors — adjusted for purple bg */
+  --success-light: oklch(18% 0.05 145);
+  --warning-light: oklch(18% 0.05 85);
+  --error-light: oklch(18% 0.05 25);
 
   /* Inverted section */
-  --surface-invert: oklch(16% 0.025 250);
-  --surface-invert-secondary: oklch(20% 0.02 250);
-  --surface-invert-tertiary: oklch(25% 0.02 250);
-  --on-invert: oklch(95% 0.008 250);
-  --on-invert-secondary: oklch(75% 0.015 250);
-  --on-invert-muted: oklch(55% 0.015 250);
-  --border-invert: oklch(25% 0.02 250);
-  --border-invert-strong: oklch(35% 0.02 250);
+  --surface-invert: oklch(14% 0.035 285);
+  --surface-invert-secondary: oklch(18% 0.03 285);
+  --surface-invert-tertiary: oklch(24% 0.028 285);
+  --on-invert: oklch(94% 0.012 285);
+  --on-invert-secondary: oklch(75% 0.02 285);
+  --on-invert-muted: oklch(55% 0.018 285);
+  --border-invert: oklch(24% 0.028 285);
+  --border-invert-strong: oklch(32% 0.025 285);
+
+  /* Shadows — deeper, violet glow */
+  --theme-shadow-sm: 0 1px 3px oklch(10% 0.05 285 / 0.3);
+  --theme-shadow-md: 0 4px 12px oklch(10% 0.05 285 / 0.35),
+    0 0 1px oklch(10% 0.05 285 / 0.15);
+  --theme-shadow-lg: 0 8px 24px oklch(10% 0.05 285 / 0.4),
+    0 1px 2px oklch(50% 0.15 295 / 0.05);
+  --theme-shadow-xl: 0 24px 48px oklch(10% 0.05 285 / 0.5),
+    0 2px 4px oklch(50% 0.15 295 / 0.08);
 }

@@ -1,20 +1,11 @@
 /* =============================================================================
    Velocity Design Tokens - Typography
    =============================================================================
-   Fluid typography using clamp() for responsive sizing
+   Fluid typography using clamp() for responsive sizing.
+   Font families are theme-controlled — see themes/*.css
    ============================================================================= */
 
 :root {
-  /* ---------------------------------------------------------------------------
-     Font Families
-     --------------------------------------------------------------------------- */
-  --font-sans: 'Manrope Variable', 'Manrope', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-display: 'Outfit Variable', 'Outfit', var(--font-sans);
-  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
-
   /* ---------------------------------------------------------------------------
      Font Sizes - Fluid Typography
      Using clamp(min, preferred, max) for smooth scaling
