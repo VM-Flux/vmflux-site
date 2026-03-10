@@ -293,7 +293,7 @@ const buttonId = `${menuId}-button`;
           class={cn(
             'hidden origin-top scale-y-0 opacity-0 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.12)] md:hidden',
             isFloating
-              ? 'rounded-b-2xl bg-background/95 backdrop-blur-xl'
+              ? 'rounded-b-2xl bg-background'
               : 'border-border bg-background border-t'
           )}
           role="navigation"
@@ -307,7 +307,7 @@ const buttonId = `${menuId}-button`;
           class={cn(
             'hidden origin-top scale-y-0 opacity-0 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.12)] md:hidden',
             isFloating
-              ? 'rounded-b-2xl bg-background/95 backdrop-blur-xl'
+              ? 'rounded-b-2xl bg-background'
               : 'border-border bg-background border-t'
           )}
           role="navigation"
@@ -398,8 +398,8 @@ const buttonId = `${menuId}-button`;
         // Fade out and blur the page content
         const mainContent = document.querySelector('main');
         const footer = document.querySelector('footer');
-        if (mainContent) mainContent.classList.add('mobile-menu-blur');
-        if (footer) footer.classList.add('mobile-menu-blur');
+        // if (mainContent) mainContent.classList.add('mobile-menu-blur');
+        // if (footer) footer.classList.add('mobile-menu-blur');
 
         // Show menu and backdrop with animations
         menu!.classList.remove('hidden', 'animate-menu-up', 'opacity-0', 'scale-y-0');
@@ -431,8 +431,8 @@ const buttonId = `${menuId}-button`;
         // Restore page content
         const mainContent = document.querySelector('main');
         const footer = document.querySelector('footer');
-        if (mainContent) mainContent.classList.remove('mobile-menu-blur');
-        if (footer) footer.classList.remove('mobile-menu-blur');
+        // if (mainContent) mainContent.classList.remove('mobile-menu-blur');
+        // if (footer) footer.classList.remove('mobile-menu-blur');
 
         // Wait for animation to complete before hiding
         setTimeout(() => {
@@ -535,11 +535,6 @@ const buttonId = `${menuId}-button`;
 </script>
 
 <style is:global>
-  .mobile-menu-blur {
-    opacity: 0.3;
-    filter: blur(4px);
-    transition: opacity 200ms, filter 200ms;
-  }
 
   /* ===== Floating header: scroll state ===== */
   [data-header-shape="floating"][data-scrolled] {
