@@ -1,100 +1,129 @@
 ---
-/**
- * About page
- * URL: /about
- */
 import PageLayout from '@/layouts/PageLayout.astro';
-import Icon from '@/components/ui/primitives/Icon/Icon.astro';
-import Badge from '@/components/ui/data-display/Badge/Badge.astro';
-import Card from '@/components/ui/data-display/Card/Card.astro';
-import { Hero } from '@/components/hero';
+import siteConfig from '@/config/site.config';
 ---
 
 <PageLayout
-  title="About Us"
-  description="Learn about Velocity and the team behind it."
+  title="About VMFlux"
+  description="About VMFlux and its focus on practical Navisworks export workflows."
 >
-  <Hero layout="centered" size="sm" showGrid>
-    <Badge slot="badge" pill pulse>Our Story</Badge>
-
-    <h1 slot="title">
-      Built by developers, <span class="text-brand-500">for developers.</span>
-    </h1>
-
-    <p slot="description">
-      Velocity was born from the frustration of setting up the same tooling over and over.
-      We decided to create the starter we always wished existed.
-    </p>
-  </Hero>
-
-  <!-- Mission Section -->
-  <section class="py-20 bg-surface-invert">
-    <div class="mx-auto max-w-4xl px-6 text-center">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-on-invert mb-6">
-        Our Mission
-      </h2>
-      <p class="text-lg text-on-invert-secondary max-w-2xl mx-auto leading-relaxed">
-        To help developers ship beautiful, performant websites faster by eliminating
-        boilerplate and providing sensible defaults.
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">About</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">
+        Built for practical export workflows.
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+        VMFlux is focused on professional export tools for Navisworks users who need
+        dependable output for visualization, coordination, handoff, and downstream processing.
       </p>
     </div>
   </section>
 
-  <!-- Values Section -->
-  <section class="py-20">
-    <div class="mx-auto max-w-6xl px-6">
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-        What We Believe
-      </h2>
+  <section class="border-b border-border bg-muted/30">
+    <div class="mx-auto max-w-5xl px-6 py-5 lg:px-8">
+      <div class="grid gap-4 text-sm font-semibold text-foreground md:grid-cols-3">
+        <div>OBJ + MTL available now</div>
+        <div>Supports Navisworks 2024 / 2025 / 2026</div>
+        <div>GLB / glTF + Properties planned next</div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- Performance -->
-        <Card hover>
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="zap" size="md" />
+  <section class="bg-background">
+    <div class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <div class="space-y-12">
+        <section>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">What VMFlux is</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+            A focused product line for Navisworks export.
+          </h2>
+          <div class="mt-6 space-y-4 text-base leading-7 text-foreground-muted">
+            <p>
+              VMFlux is built around a simple goal: make it easier to move useful model
+              data out of Navisworks in a format that downstream workflows can actually use.
+            </p>
+            <p>
+              Instead of trying to be a broad platform, VMFlux focuses on practical,
+              production-minded export tools with clear controls, dependable results,
+              and support for real project workflows.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Current focus</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+            OBJ + MTL today, broader export coverage next.
+          </h2>
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            <div class="rounded-3xl border border-border bg-card p-8">
+              <h3 class="text-2xl font-semibold text-foreground">Available now</h3>
+              <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                VMFlux OBJ Exporter supports current Navisworks releases and provides
+                OBJ + MTL output with material-aware behavior, export scope control,
+                and practical units handling.
+              </p>
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-bold text-foreground">Performance First</h3>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                Every decision is made with performance in mind. Zero JavaScript by default,
-                optimized images, and minimal CSS.
+
+            <div class="rounded-3xl border border-border bg-card p-8">
+              <h3 class="text-2xl font-semibold text-foreground">Coming next</h3>
+              <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                VMFlux is expanding toward GLB / glTF and properties export to support
+                richer interoperability, modern viewers, and structured downstream workflows.
               </p>
             </div>
           </div>
-        </Card>
+        </section>
 
-        <!-- Simplicity -->
-        <Card hover>
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="box" size="md" />
+        <section>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Why it exists</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+            Built around real project needs.
+          </h2>
+          <div class="mt-6 grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl border border-border bg-card p-6">
+              <h3 class="text-xl font-semibold text-foreground">Practical</h3>
+              <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                Features are chosen for workflows that teams actually use, not just for demos.
+              </p>
             </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-bold text-foreground">Simplicity Matters</h3>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                We strip away complexity so you can focus on what matters: building
-                great products for your users.
+
+            <div class="rounded-2xl border border-border bg-card p-6">
+              <h3 class="text-xl font-semibold text-foreground">Focused</h3>
+              <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                VMFlux stays focused on making export workflows clearer, cleaner, and more dependable.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-border bg-card p-6">
+              <h3 class="text-xl font-semibold text-foreground">Expanding</h3>
+              <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                The roadmap grows from today’s exporter into broader format and properties workflows.
               </p>
             </div>
           </div>
-        </Card>
+        </section>
 
-        <!-- Open Source -->
-        <Card hover>
-          <div class="flex items-start gap-4">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center text-brand-500 shrink-0">
-              <Icon name="github" size="md" />
-            </div>
-            <div class="flex-1 min-w-0">
-              <h3 class="text-base font-bold text-foreground">Open Source</h3>
-              <p class="text-sm text-foreground-muted leading-relaxed mt-1.5">
-                Velocity is free and open source. We believe in giving back to the
-                community that made this possible.
-              </p>
-            </div>
+        <section>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Support</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+            Need to get in touch?
+          </h2>
+          <div class="mt-6 rounded-3xl border border-border bg-card p-8">
+            <p class="text-base leading-7 text-foreground-muted">
+              Support is currently handled by email.
+            </p>
+            <p class="mt-6">
+              <a
+                href={`mailto:${siteConfig.email}`}
+                class="text-base font-medium text-foreground hover:underline"
+              >
+                {siteConfig.email}
+              </a>
+            </p>
           </div>
-        </Card>
+        </section>
       </div>
     </div>
   </section>

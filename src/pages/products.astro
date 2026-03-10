@@ -1,0 +1,119 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Products"
+  description="VMFlux products for Navisworks export workflows."
+>
+  <section class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Products</p>
+    <h1 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">Export tools built for Navisworks workflows.</h1>
+    <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+      VMFlux products are focused on clean export pipelines for teams working across BIM,
+      visualization, coordination, and downstream model use cases.
+    </p>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-2">
+      <div class="rounded-3xl border border-border bg-card p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Available now</p>
+        <h2 class="mt-3 text-2xl font-semibold text-foreground">VMFlux OBJ Exporter</h2>
+        <p class="mt-4 text-foreground-muted">
+          Exports OBJ + MTL from Navisworks with support for current release versions,
+          instance-aware structure, and material-aware output.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-foreground-muted">
+          <li>OBJ + MTL export</li>
+          <li>Supports Navisworks 2024 / 2025 / 2026</li>
+          <li>Material naming and transparency support</li>
+          <li>Designed for practical project workflows</li>
+        </ul>
+      </div>
+
+      <div class="rounded-3xl border border-border bg-muted/50 p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Coming next</p>
+        <h2 class="mt-3 text-2xl font-semibold text-foreground">GLB / glTF + Properties Export</h2>
+        <p class="mt-4 text-foreground-muted">
+          The next stage of VMFlux expands toward richer export targets for modern real-time,
+          web, and structured-data workflows.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-foreground-muted">
+          <li>GLB / glTF-oriented workflows</li>
+          <li>Properties export</li>
+          <li>Broader downstream interoperability</li>
+          <li>Future-ready asset delivery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-background">
+    <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+        Current product
+      </p>
+      <h2 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">
+        VMFlux OBJ Exporter
+      </h2>
+      <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+        Designed for teams that need geometry and material output from Navisworks in a clean,
+        dependable, and usable format for downstream work.
+      </p>
+
+      <div class="mt-10 grid gap-4 lg:grid-cols-3">
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-2xl font-semibold text-foreground">Export scope control</h3>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Choose between Selected Models and Entire Model so exports can match either
+            targeted review tasks or full model handoff.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-2xl font-semibold text-foreground">Units and scaling options</h3>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Supports mm, cm, m, km, in, ft, yd, and mi, with an option to keep numeric
+            values without unit scaling when required by downstream workflows.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-2xl font-semibold text-foreground">Material-aware output</h3>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Exports OBJ + MTL with real Navisworks material naming and transparency
+            handling for more useful downstream results.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-4 lg:grid-cols-2">
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Key capabilities
+          </p>
+          <ul class="mt-6 space-y-3 text-sm leading-7 text-foreground-muted">
+            <li>OBJ + MTL export from supported Navisworks versions</li>
+            <li>Per-instance group structure for clearer output organization</li>
+            <li>Selected Models or Entire Model export scope</li>
+            <li>Units dropdown with practical scaling control</li>
+            <li>Material naming and transparency support</li>
+            <li>Workflow designed for real project use, not demo-only scenarios</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Best suited for
+          </p>
+          <ul class="mt-6 space-y-3 text-sm leading-7 text-foreground-muted">
+            <li>Visualization preparation</li>
+            <li>Coordination model handoff</li>
+            <li>Downstream conversion workflows</li>
+            <li>Automation pipelines using exported model data</li>
+            <li>Teams that need a practical bridge out of Navisworks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

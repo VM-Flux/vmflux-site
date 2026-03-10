@@ -1,0 +1,287 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import siteConfig from '@/config/site.config';
+---
+
+<PageLayout
+  title="Docs"
+  description="Documentation for VMFlux OBJ Exporter: installation, usage, export options, output files, and troubleshooting."
+>
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Docs</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">
+        VMFlux OBJ Exporter documentation
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+        Setup, usage, export options, output files, and troubleshooting for the current
+        VMFlux exporter. This page is also suitable to become the future F1 help target.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a
+          href={siteConfig.appStoreUrl}
+          class="inline-flex items-center rounded-full bg-[#f15a24] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#d94d1c]"
+        >
+          View on Autodesk App Store
+        </a>
+
+        <a
+          href={`mailto:${siteConfig.email}`}
+          class="inline-flex items-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+        >
+          Contact support
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-muted/30">
+    <div class="mx-auto max-w-6xl px-6 py-5 lg:px-8">
+      <div class="grid gap-4 text-sm font-medium text-foreground md:grid-cols-4">
+        <div>Supports Navisworks 2024 / 2025 / 2026</div>
+        <div>Exports OBJ + MTL</div>
+        <div>Scope and units controls included</div>
+        <div>Support by email</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Quick navigation
+          </p>
+          <div class="mt-6 rounded-3xl border border-border bg-card p-6">
+            <ul class="space-y-3 text-sm text-foreground-muted">
+              <li><a href="#overview" class="hover:text-foreground">Overview</a></li>
+              <li><a href="#supported-versions" class="hover:text-foreground">Supported versions</a></li>
+              <li><a href="#installation" class="hover:text-foreground">Installation</a></li>
+              <li><a href="#how-to-open" class="hover:text-foreground">How to open the exporter</a></li>
+              <li><a href="#export-options" class="hover:text-foreground">Export options</a></li>
+              <li><a href="#output-files" class="hover:text-foreground">Output files</a></li>
+              <li><a href="#troubleshooting" class="hover:text-foreground">Troubleshooting</a></li>
+              <li><a href="#support" class="hover:text-foreground">Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-12">
+          <section id="overview">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Overview</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              What the exporter does
+            </h2>
+            <div class="mt-6 space-y-4 text-base leading-7 text-foreground-muted">
+              <p>
+                VMFlux OBJ Exporter converts supported Navisworks model content into
+                <span class="font-medium text-foreground"> OBJ + MTL </span>
+                output for downstream workflows such as visualization, review, conversion,
+                and external handoff.
+              </p>
+              <p>
+                The exporter is designed for practical project use and includes export scope
+                control, units selection, and material-aware output behavior.
+              </p>
+            </div>
+          </section>
+
+          <section id="supported-versions">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Compatibility</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              Supported versions
+            </h2>
+            <div class="mt-6 rounded-3xl border border-border bg-card p-8">
+              <ul class="space-y-3 text-base leading-7 text-foreground-muted">
+                <li>Navisworks 2024</li>
+                <li>Navisworks 2025</li>
+                <li>Navisworks 2026</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="installation">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Installation</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              How to install
+            </h2>
+            <div class="mt-6 space-y-4 text-base leading-7 text-foreground-muted">
+              <p>
+                Installation and updates are handled through the Autodesk App Store package
+                for the exporter.
+              </p>
+              <ol class="space-y-2 pl-5">
+                <li>1. Go to the Autodesk App Store listing for VMFlux OBJ Exporter.</li>
+                <li>2. Download and install the package for your Navisworks version.</li>
+                <li>3. Open Navisworks after installation completes.</li>
+                <li>4. Launch the exporter from the VMFlux command or ribbon location in Navisworks.</li>
+              </ol>
+            </div>
+          </section>
+
+          <section id="how-to-open">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Usage</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              How to open the exporter
+            </h2>
+            <div class="mt-6 space-y-4 text-base leading-7 text-foreground-muted">
+              <p>Open Navisworks, then launch the VMFlux exporter from its installed UI entry.</p>
+              <p>
+                Once opened, the exporter dialog lets you choose export scope, units, and
+                whether to preserve numeric values without unit scaling.
+              </p>
+            </div>
+          </section>
+
+          <section id="export-options">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Export options</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              What each option means
+            </h2>
+
+            <div class="mt-8 grid gap-6 md:grid-cols-2">
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">Export scope</h3>
+                <div class="mt-4 space-y-3 text-sm leading-7 text-foreground-muted">
+                  <p>
+                    <span class="font-medium text-foreground">Selected Models</span> exports
+                    only the currently selected model items.
+                  </p>
+                  <p>
+                    <span class="font-medium text-foreground">Entire Model</span> exports the
+                    whole model available in the current Navisworks file.
+                  </p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">Units</h3>
+                <div class="mt-4 space-y-3 text-sm leading-7 text-foreground-muted">
+                  <p>The exporter supports these output units:</p>
+                  <p>mm, cm, m, km, in, ft, yd, mi</p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-card p-6 md:col-span-2">
+                <h3 class="text-xl font-semibold text-foreground">Keep numeric values (no unit scaling)</h3>
+                <div class="mt-4 space-y-3 text-sm leading-7 text-foreground-muted">
+                  <p>
+                    When this option is enabled, the exporter keeps the original numeric values
+                    instead of scaling them to match the selected output unit.
+                  </p>
+                  <p>
+                    This can be useful when the downstream tool or workflow expects the original
+                    coordinate magnitudes to remain unchanged.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="output-files">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Output</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              Files generated by export
+            </h2>
+
+            <div class="mt-8 grid gap-6 md:grid-cols-2">
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">OBJ</h3>
+                <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                  The main geometry file containing exported mesh data.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">MTL</h3>
+                <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                  The material definition file associated with the OBJ export.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-3xl border border-border bg-card p-8">
+              <h3 class="text-xl font-semibold text-foreground">Material behavior</h3>
+              <div class="mt-4 space-y-3 text-sm leading-7 text-foreground-muted">
+                <p>
+                  The exporter includes material-aware output with real Navisworks material naming
+                  and transparency handling for more useful downstream results.
+                </p>
+                <p>
+                  Output organization is designed to be practical for real project workflows,
+                  including per-instance group structure where applicable.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="troubleshooting">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Troubleshooting</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              Common issues
+            </h2>
+
+            <div class="mt-8 space-y-6">
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">Exporter does not open</h3>
+                <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                  Confirm that the correct plugin version is installed for your Navisworks version,
+                  then restart Navisworks and try again.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">Export result is incomplete</h3>
+                <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                  Check whether you exported <span class="font-medium text-foreground">Selected Models</span>
+                  instead of <span class="font-medium text-foreground">Entire Model</span>, or retry with a
+                  smaller subset to isolate the issue.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">Units look wrong downstream</h3>
+                <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                  Re-check the selected output unit and whether
+                  <span class="font-medium text-foreground"> Keep numeric values (no unit scaling) </span>
+                  was enabled.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-card p-6">
+                <h3 class="text-xl font-semibold text-foreground">Cannot write export files</h3>
+                <p class="mt-4 text-sm leading-7 text-foreground-muted">
+                  Make sure the destination folder is writable and not blocked by permissions,
+                  sync software, or security controls.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="support">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Support</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              Need help?
+            </h2>
+            <div class="mt-6 rounded-3xl border border-border bg-card p-8">
+              <p class="text-base leading-7 text-foreground-muted">
+                Support is currently handled by email. Include your Navisworks version,
+                what you were exporting, and what happened so the issue can be reviewed faster.
+              </p>
+              <p class="mt-6">
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  class="text-base font-medium text-foreground hover:underline"
+                >
+                  {siteConfig.email}
+                </a>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

@@ -1,66 +1,223 @@
 ---
 import LandingLayout from '@/layouts/LandingLayout.astro';
-import { Hero } from '@/components/hero';
-import Button from '@/components/ui/form/Button/Button.astro';
-import Badge from '@/components/ui/data-display/Badge/Badge.astro';
-import Icon from '@/components/ui/primitives/Icon/Icon.astro';
-import SocialProof from '@/components/ui/marketing/SocialProof/SocialProof.astro';
-import { TerminalDemo } from '@/components/ui/marketing/TerminalDemo';
-import TechStack from '@/components/landing/TechStack.astro';
-import FeatureTabs from '@/components/landing/FeatureTabs.tsx';
-import LighthouseScores from '@/components/landing/LighthouseScores.astro';
-import Credibility from '@/components/landing/Credibility.astro';
-import CTA from '@/components/landing/CTA.astro';
 ---
 
 <LandingLayout
-  title="The Complete Astro Starter"
-  description="Design tokens, accessible components, SEO, and i18n configured from the first commit. Velocity ships what other starters leave as homework."
+  title="VMFlux | Professional Navisworks export workflows"
+  description="Professional Navisworks export workflows for OBJ/MTL today, with GLB/glTF and properties export coming next."
+  includeOrgSchema={true}
 >
-  <Hero layout="split" size="lg" showGrid showBlob blobPosition="right">
-    <Badge slot="badge" pill pulse>v1.0 Public Beta is Live</Badge>
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-16">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            VMFlux for Navisworks
+          </p>
 
-    <h1 slot="title">
-      Your next site <span class="text-brand-500">starts here.</span>
-    </h1>
+          <h1 class="mt-4 max-w-5xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Professional export workflows from Navisworks to OBJ/MTL today —
+            GLB/glTF and properties next.
+          </h1>
 
-    <p slot="description">
-      Design tokens, accessible components, SEO, and i18n configured from the first commit. Velocity
-      ships what other starters leave as homework.
-    </p>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-foreground-muted">
+            VMFlux helps coordination, visualization, and downstream teams move model data
+            out of Navisworks with cleaner structure, material-aware output, and a more
+            dependable export workflow.
+          </p>
 
-    <Fragment slot="actions">
-      <Button size="lg" href="https://docs.deployvelocity.com" target="_blank">
-        View Docs
-        <Icon name="arrow-right" size="sm" />
-      </Button>
-      <Button
-        size="lg"
-        variant="outline"
-        href="https://github.com/southwellmedia/velocity"
-        target="_blank"
-      >
-        <Icon name="github" size="sm" />
-        View on GitHub
-      </Button>
-    </Fragment>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/products"
+            class="inline-flex items-center rounded-full bg-[#f15a24] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#d94d1c]"
+            >
+              Explore products
+            </a>
 
-    <TerminalDemo slot="aside" client:load />
+            <a
+              href="/docs"
+              class="inline-flex items-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+            >
+              Read docs
+            </a>
+          </div>
 
-    <SocialProof
-      class="mt-[var(--space-stack-lg)]"
-      text="Shipped to production weekly."
-      avatars={[
-        'https://i.pravatar.cc/150?img=12',
-        'https://i.pravatar.cc/150?img=33',
-        'https://www.southwellmedia.com/_vercel/image?url=%2Fassets%2FMichaelFroseth2025.jpg&w=828&q=90',
-      ]}
-    />
-  </Hero>
+          <div class="mt-10 grid gap-6 border-t border-border pt-8 sm:grid-cols-3">
+            <div>
+              <p class="text-2xl font-semibold tracking-tight text-foreground">2024–2026</p>
+              <p class="mt-2 text-sm leading-6 text-foreground-muted">
+                Supported Navisworks versions for the current exporter.
+              </p>
+            </div>
 
-  <TechStack />
-  <FeatureTabs client:visible />
-  <LighthouseScores />
-  <Credibility />
-  <CTA />
+            <div>
+              <p class="text-2xl font-semibold tracking-tight text-foreground">OBJ + MTL</p>
+              <p class="mt-2 text-sm leading-6 text-foreground-muted">
+                Available now for practical geometry and material export workflows.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-2xl font-semibold tracking-tight text-foreground">GLB / glTF</p>
+              <p class="mt-2 text-sm leading-6 text-foreground-muted">
+                Coming next alongside properties export for broader downstream use.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-6">
+          <div class="rounded-3xl border border-border bg-card p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+              Current product
+            </p>
+            <h2 class="mt-3 text-2xl font-semibold tracking-tight text-foreground">
+              VMFlux OBJ Exporter
+            </h2>
+            <p class="mt-4 text-sm leading-7 text-foreground-muted">
+              Focused on dependable OBJ + MTL output from Navisworks with instance-aware
+              structure, material naming, and transparency handling aligned to real project use.
+            </p>
+
+            <ul class="mt-6 space-y-3 text-sm text-foreground-muted">
+              <li>Supports Navisworks 2024 / 2025 / 2026</li>
+              <li>Exports OBJ + MTL</li>
+              <li>Handles material-aware output</li>
+              <li>Designed for production-minded workflows</li>
+            </ul>
+
+            <div class="mt-8">
+              <a
+                href="/products"
+                class="inline-flex items-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+              >
+                View product details
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-border bg-muted/50 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+              Roadmap
+            </p>
+            <h2 class="mt-3 text-2xl font-semibold tracking-tight text-foreground">
+              Expanding export coverage
+            </h2>
+            <p class="mt-4 text-sm leading-7 text-foreground-muted">
+              VMFlux is moving toward GLB/glTF and properties export to support richer BIM,
+              asset, web-viewer, and automation workflows.
+            </p>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-border bg-background p-5">
+                <p class="text-sm font-semibold text-foreground">GLB / glTF</p>
+                <p class="mt-2 text-sm leading-6 text-foreground-muted">
+                  For modern viewer and real-time pipelines.
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-background p-5">
+                <p class="text-sm font-semibold text-foreground">Properties export</p>
+                <p class="mt-2 text-sm leading-6 text-foreground-muted">
+                  For structured downstream model data use.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-muted/50">
+    <div class="mx-auto max-w-7xl px-6 py-5 lg:px-8">
+      <div class="grid gap-4 text-sm font-semibold text-foreground md:grid-cols-4">
+        <div>Built for coordination workflows</div>
+        <div>Material-aware export output</div>
+        <div>Downloads via Autodesk App Store</div>
+        <div>Support available by email</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+          Why VMFlux
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          Built for practical model export, not just demo scenarios.
+        </h2>
+        <p class="mt-5 text-base leading-7 text-foreground-muted">
+          The focus is reliability, clarity, and useful output structure for teams that
+          actually need to move model data into the next step of work.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-xl font-semibold text-foreground">Reliable geometry export</h3>
+          <p class="mt-3 text-sm leading-6 text-foreground-muted">
+            Export model geometry into structured OBJ output suitable for review,
+            visualization, conversion, and downstream reuse.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-xl font-semibold text-foreground">Material-aware output</h3>
+          <p class="mt-3 text-sm leading-6 text-foreground-muted">
+            Preserve material assignments with MTL output, including real Navisworks
+            material naming and transparency handling.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-xl font-semibold text-foreground">Roadmap for richer exports</h3>
+          <p class="mt-3 text-sm leading-6 text-foreground-muted">
+            Expand toward GLB/glTF and properties export for broader interoperability
+            across modern model workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-background">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
+      <div class="rounded-3xl border border-border bg-card p-8 shadow-sm lg:p-9">
+        <div class="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+              Get started
+            </p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+              Explore the current exporter and product direction.
+            </h2>
+            <p class="mt-4 max-w-2xl text-base leading-7 text-foreground-muted">
+              Start with the current OBJ exporter, review documentation, and follow the
+              roadmap as VMFlux expands into richer export workflows.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/products"
+            class="inline-flex items-center rounded-full bg-[#f15a24] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#d94d1c]"
+            >
+              View products
+            </a>
+
+            <a
+              href="/resources"
+              class="inline-flex items-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+            >
+              Browse resources
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </LandingLayout>

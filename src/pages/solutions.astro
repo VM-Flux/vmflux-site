@@ -1,0 +1,87 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Solutions"
+  description="VMFlux solutions for visualization, coordination handoff, and downstream export workflows."
+>
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Solutions</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">
+        Use cases that need dependable export.
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+        VMFlux is built for teams that need model data to move out of Navisworks cleanly
+        and into the next viewer, workflow, or downstream process.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-muted/30">
+    <div class="mx-auto max-w-6xl px-6 py-5 lg:px-8">
+      <div class="grid gap-4 text-sm font-medium text-foreground md:grid-cols-4">
+        <div>Visualization workflows</div>
+        <div>Coordination handoff</div>
+        <div>Downstream conversion</div>
+        <div>Automation-friendly output</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h2 class="text-2xl font-semibold text-foreground">Visualization</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Prepare geometry and materials for rendering, presentation, review, and
+            external sharing workflows.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h2 class="text-2xl font-semibold text-foreground">Coordination handoff</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Export structured model output for teams that need a practical bridge
+            out of Navisworks and into the next step of work.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h2 class="text-2xl font-semibold text-foreground">Downstream automation</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Support pipelines that inspect, convert, reorganize, or repurpose
+            exported model data programmatically.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Where VMFlux fits
+          </p>
+          <ul class="mt-6 space-y-3 text-sm leading-7 text-foreground-muted">
+            <li>Getting geometry out of Navisworks for external use</li>
+            <li>Passing model content into visualization or review workflows</li>
+            <li>Creating cleaner handoff outputs for downstream teams</li>
+            <li>Supporting tools that consume exported OBJ + MTL data</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Product direction
+          </p>
+          <p class="mt-6 text-sm leading-7 text-foreground-muted">
+            VMFlux starts with dependable OBJ + MTL workflows and expands toward
+            GLB / glTF and properties export for broader interoperability and
+            richer downstream use.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

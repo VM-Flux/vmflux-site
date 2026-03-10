@@ -1,0 +1,107 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import siteConfig from '@/config/site.config';
+---
+
+<PageLayout
+  title="FAQ"
+  description="Frequently asked questions about VMFlux OBJ Exporter and the VMFlux product roadmap."
+>
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">FAQ</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">
+        Frequently asked questions
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+        Quick answers about the current VMFlux exporter, support, downloads, and what is coming next.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-muted/30">
+    <div class="mx-auto max-w-5xl px-6 py-5 lg:px-8">
+      <div class="grid gap-4 text-sm font-semibold text-foreground md:grid-cols-4">
+        <div>Current version: v3.2.6</div>
+        <div>Supports Navisworks 2024 / 2025 / 2026</div>
+        <div>OBJ + MTL available now</div>
+        <div>Support by email</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <div class="space-y-6">
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">What does VMFlux support today?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            VMFlux currently focuses on OBJ + MTL export workflows for supported Navisworks versions.
+            The current public release is VMFlux OBJ Exporter v3.2.6.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">Which Navisworks versions are supported?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            The current exporter supports Navisworks 2024, 2025, and 2026.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">What is coming next?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            GLB / glTF export and properties export are planned next as VMFlux expands into richer
+            downstream workflows.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">Can I download the plugin from this site?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            No. Downloads are handled through the Autodesk App Store, not through this website.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">What does the exporter output?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            The current exporter outputs OBJ + MTL files, with material-aware behavior including
+            real Navisworks material naming and transparency handling.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">Can I export only part of a model?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            Yes. The exporter supports both Selected Models and Entire Model scope so you can export
+            either a targeted subset or the full model.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">What units does it support?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            The exporter supports mm, cm, m, km, in, ft, yd, and mi. It also includes
+            “Keep numeric values (no unit scaling)” for workflows that need the original numeric values preserved.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-card p-8">
+          <h2 class="text-2xl font-semibold text-foreground">How do I get support?</h2>
+          <p class="mt-4 text-base leading-7 text-foreground-muted">
+            Support is currently handled by email.
+          </p>
+          <p class="mt-4">
+            <a
+              href={`mailto:${siteConfig.email}`}
+              class="text-base font-medium text-foreground hover:underline"
+            >
+              {siteConfig.email}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

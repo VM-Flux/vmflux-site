@@ -1,0 +1,88 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import siteConfig from '@/config/site.config';
+---
+
+<PageLayout
+  title="Resources"
+  description="VMFlux docs, changelog, FAQ, privacy policy, and support resources."
+>
+  <section class="border-b border-border bg-background">
+    <div class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Resources</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight text-foreground">
+        Everything in one place.
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-foreground-muted">
+        Product documentation, update history, support references, and key policy pages
+        for current and future VMFlux products.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-muted/30">
+    <div class="mx-auto max-w-5xl px-6 py-5 lg:px-8">
+      <div class="grid gap-4 text-sm font-medium text-foreground md:grid-cols-4">
+        <div>Docs and usage guidance</div>
+        <div>Version history</div>
+        <div>FAQ and privacy</div>
+        <div>Email support</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-2">
+        <a href="/docs" class="rounded-2xl border border-border bg-card p-6 transition hover:bg-muted/50">
+          <h2 class="text-2xl font-semibold text-foreground">Docs</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Installation, usage, export options, output files, and troubleshooting.
+          </p>
+        </a>
+
+        <a href="/changelog" class="rounded-2xl border border-border bg-card p-6 transition hover:bg-muted/50">
+          <h2 class="text-2xl font-semibold text-foreground">Changelog</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Track current release details, major capabilities, and roadmap direction.
+          </p>
+        </a>
+
+        <a href="/faq" class="rounded-2xl border border-border bg-card p-6 transition hover:bg-muted/50">
+          <h2 class="text-2xl font-semibold text-foreground">FAQ</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Quick answers about versions, downloads, support, and exporter behavior.
+          </p>
+        </a>
+
+        <a href="/privacy" class="rounded-2xl border border-border bg-card p-6 transition hover:bg-muted/50">
+          <h2 class="text-2xl font-semibold text-foreground">Privacy</h2>
+          <p class="mt-4 text-sm leading-7 text-foreground-muted">
+            Current privacy policy for the plugin and support communications.
+          </p>
+        </a>
+      </div>
+
+      <div class="mt-10 rounded-3xl border border-border bg-card p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+          Support
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+          Need help?
+        </h2>
+        <p class="mt-4 max-w-2xl text-base leading-7 text-foreground-muted">
+          Support is currently handled by email. Include your Navisworks version,
+          what you were exporting, and what happened so issues can be reviewed faster.
+        </p>
+        <p class="mt-6">
+          <a
+            href={`mailto:${siteConfig.email}`}
+            class="text-base font-medium text-foreground hover:underline"
+          >
+            {siteConfig.email}
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</PageLayout>

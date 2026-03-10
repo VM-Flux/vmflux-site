@@ -7,6 +7,7 @@ export interface SiteConfig {
   ogImage: string;
   author: string;
   email: string;
+  appStoreUrl: string;
   phone?: string;
   address?: {
     street: string;
@@ -24,69 +25,43 @@ export interface SiteConfig {
     google?: string;
     bing?: string;
   };
-  /**
-   * Branding configuration
-   * Logo files: Replace SVGs in src/assets/branding/
-   * Favicon: Replace in public/favicon.svg
-   */
   branding: {
-    /** Logo alt text for accessibility */
     logo: {
       alt: string;
     };
-    /** Favicon path (lives in public/) */
     favicon: {
       svg: string;
     };
-    /** Theme colors for manifest and browser UI */
     colors: {
-      /** Browser toolbar color (hex) */
       themeColor: string;
-      /** PWA splash screen background (hex) */
       backgroundColor: string;
     };
   };
 }
 
 const siteConfig: SiteConfig = {
-  name: 'Velocity',
-  description: 'A modern website built with Astro and Tailwind CSS',
+  name: 'VMFlux',
+  description:
+    'Professional Navisworks export tools for OBJ/MTL workflows, with GLB/glTF and properties export coming soon.',
   url: SITE_URL || 'https://example.com',
   ogImage: '/og-default.png',
-  author: 'Southwell Media',
-  // Demo contact info - replace with your actual business details
-  email: 'hello@example.com',
-  phone: '+1 (555) 123-4567',
-  address: {
-    street: '123 Main St',
-    city: 'Dallas',
-    state: 'TX',
-    zip: '75001',
-    country: 'US',
-  },
-  socialLinks: [
-    'https://github.com/southwellmedia',
-  ],
-  // Twitter metadata - update with your actual handles or remove
-  // twitter: {
-  //   site: '@yourhandle',
-  //   creator: '@yourhandle',
-  // },
+  author: 'VMFlux',
+  email: 'vmflux_hk@outlook.com',
+  socialLinks: [],
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
     bing: BING_SITE_VERIFICATION,
   },
-  // Branding: Logo files live in src/assets/branding/
-  // Replace the SVG files there with your own branding
+  appStoreUrl: 'https://apps.autodesk.com/',
   branding: {
     logo: {
-      alt: 'Velocity',
+      alt: 'VMFlux',
     },
     favicon: {
       svg: '/favicon.svg',
     },
     colors: {
-      themeColor: '#F94C10',
+      themeColor: '#0F3D91',
       backgroundColor: '#ffffff',
     },
   },

@@ -1,15 +1,8 @@
 ---
-/**
- * LandingLayout
- * Layout wrapper for landing-style pages (marketing, demo, showcase)
- * Uses Header + Footer with landing-specific configuration
- *
- * This layout is part of the "demo" layer - it can be optionally installed
- * via CLI for users who want the full landing page experience.
- */
 import BaseLayout from './BaseLayout.astro';
 import Header from '@/components/layout/Header.astro';
 import Footer from '@/components/layout/Footer.astro';
+import siteConfig from '@/config/site.config';
 
 interface Props {
   title?: string;
@@ -30,6 +23,32 @@ const {
   nofollow = false,
   includeOrgSchema = false,
 } = Astro.props;
+
+const footerLinkGroups = [
+  {
+    title: 'Products',
+    links: [
+      { label: 'OBJ Exporter', href: '/products' },
+      { label: 'Solutions', href: '/solutions' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Docs', href: '/docs' },
+      { label: 'Changelog', href: '/changelog' },
+      { label: 'FAQ', href: '/faq' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Resources', href: '/resources' },
+      { label: 'Privacy', href: '/privacy' },
+    ],
+  },
+];
 ---
 
 <BaseLayout
@@ -42,24 +61,79 @@ const {
   includeOrgSchema={includeOrgSchema}
 >
   <Header
-    slot="header"
-    position="fixed"
+    position="sticky"
     size="lg"
-    showCta
-    cta={{ label: 'View Docs', href: 'https://docs.deployvelocity.com' }}
-    extraNav={[{ label: 'Features', href: '#features' }]}
-    actions={[
-      {
-        icon: 'github',
-        href: 'https://github.com/southwellmedia/velocity',
-        label: 'View on GitHub',
-        iconOnly: true,
-        target: '_blank',
-      },
-    ]}
-  />
+    variant="solid"
+    showThemeToggle={false}
+    showCta={false}
+  >
+    <div slot="actions" class="hidden items-center gap-3 md:flex">
+      <a
+        href={siteConfig.appStoreUrl}
+        class="inline-flex items-center rounded-full bg-[#f15a24] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#d94d1c]"
+      >
+        View on Autodesk App Store
+      </a>
+    </div>
+  </Header>
 
-  <slot />
+  <main id="main-content">
+    <slot />
+  </main>
 
-  <Footer slot="footer" layout="simple" background="secondary" showCopyright={false} />
+  <footer class="border-t border-border bg-background">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-14">
+      <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
+        <div>
+          <a href="/" class="text-2xl font-semibold tracking-tight text-foreground">
+            VMFlux
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-7 text-foreground-muted">
+            Professional Navisworks export tools for BIM coordination and downstream 3D workflows.
+          </p>
+          <p class="mt-4 text-sm">
+            <a href={`mailto:${siteConfig.email}`} class="text-foreground hover:underline">
+              {siteConfig.email}
+            </a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
+            Products
+          </h2>
+          <ul class="mt-4 space-y-3 text-sm text-foreground-muted">
+            <li><a href="/products" class="hover:text-foreground">OBJ Exporter</a></li>
+            <li><a href="/solutions" class="hover:text-foreground">Solutions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
+            Resources
+          </h2>
+          <ul class="mt-4 space-y-3 text-sm text-foreground-muted">
+            <li><a href="/docs" class="hover:text-foreground">Docs</a></li>
+            <li><a href="/changelog" class="hover:text-foreground">Changelog</a></li>
+            <li><a href="/faq" class="hover:text-foreground">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
+            Company
+          </h2>
+          <ul class="mt-4 space-y-3 text-sm text-foreground-muted">
+            <li><a href="/about" class="hover:text-foreground">About</a></li>
+            <li><a href="/resources" class="hover:text-foreground">Resources</a></li>
+            <li><a href="/privacy" class="hover:text-foreground">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-border pt-6 text-sm text-foreground-muted">
+        © {new Date().getFullYear()} VMFlux. All rights reserved.
+      </div>
+    </div>
+  </footer>
 </BaseLayout>
