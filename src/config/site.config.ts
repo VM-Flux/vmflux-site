@@ -43,7 +43,7 @@ const siteConfig: SiteConfig = {
   name: 'VMFlux',
   description:
     'Professional Navisworks export tools for OBJ/MTL workflows, with GLB/glTF and properties export coming soon.',
-  url: SITE_URL || 'https://example.com',
+  url: SITE_URL || 'https://vm-flux.com',
   ogImage: '/og-default.png',
   author: 'VMFlux',
   email: 'vmflux_hk@outlook.com',
